@@ -4,6 +4,7 @@ import profile from '../../assets/images/Mohan-muruge.jpg'
 import './header.css'
 import Button from '../Button/Button.js'
 import buttonImage from '../../assets/icons/upload.svg'
+import VideoPlaying from '../VideoPlaying/VideoPlaying'
 
 
 const Header = () => {
@@ -15,6 +16,7 @@ const Header = () => {
             <img className='header__profile-image' src={profile}/>
         </div>
         <Button buttonName='UPLOAD' image={buttonImage}/>
+        <VideoPlaying/>
     </header>
   )
 }
