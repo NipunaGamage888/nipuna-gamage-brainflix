@@ -4,8 +4,8 @@ import "./VideoPlaying.css";
 
 const VideoPlaying = () => {
   return (
-    <section className="now-playing">
-      <img className="now-playing__main-image" src={image} />
+    <main className="now-playing">
+      <video className="now-playing__main-image" poster={image} controls/>
       <h2 className="now-playing__heading">
         The Future of Artificial Inteiigence
       </h2>
@@ -39,7 +39,7 @@ const VideoPlaying = () => {
           frontier.
         </p>
       </article>
-    </section>
+    </main>
   );
 };
 
