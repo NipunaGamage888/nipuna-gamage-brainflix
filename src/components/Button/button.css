@@ -1,0 +1,20 @@
+.button {
+  display: flex;
+  color: #FFFFFF;
+  background-color: #0095FF;
+  width: 80%;
+  height: 6vh;
+  border-radius: 5px;
+  align-items: center;
+  border: none;
+  justify-content: space-between;
+  padding-right: 30%;
+}
+.button__image {
+  padding-left: 0.5rem;
+}
+.button__name {
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=button.css.map */

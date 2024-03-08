@@ -1,0 +1,23 @@
+@use '../../styles/partials/variables.scss' as colors;
+.button{
+    display: flex;
+    color: colors.$white;
+    background-color: colors.$brainflix-blue;
+    width: 80%;
+    height:6vh;
+    border-radius: 5px;
+    align-items: center;
+    border: none;
+    justify-content: space-between;
+    padding-right:30%;
+
+    &__image{
+     padding-left: 0.5rem;
+    }
+    &__name{
+        justify-self: center;
+        align-self: center;
+        font-size: 1.5rem;
+    }
+
+}
