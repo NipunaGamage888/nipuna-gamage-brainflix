@@ -6,20 +6,23 @@ import './nextvideo.css'
 //     "channel": "Aiden Thompson",
 //     "image": "https://unit-3-project-api-0a5620414506.herokuapp.com/images/image0.jpg"
 //   },
-function NextVideo({videos}) {
+function NextVideo({videos, wantVideo}) {
   return (
     <section className='videos'>
         <h3 className='videos__heading'>Next Videos</h3>
         <div className='videos__map'> 
             {videos.map((video)=>{
                 return(
-                    <button key={video.id} className='videos__detail'>
+                    
+                        <button onClick={()=>wantVideo(video.id)} key={video.id} className='videos__button'>
                         <img className='videos__image' src={video.image}/>
                         <div className='videos__info'>
                             <p className='videos__title'>{video.title}</p>
                             <p className='videos__channel'>{video.channel}</p>
                         </div>
                     </button>
+                    
+                    
                 )
             })}
         </div>

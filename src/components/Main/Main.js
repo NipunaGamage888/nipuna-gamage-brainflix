@@ -18,6 +18,11 @@ const Main = () => {
     const[video,setVideos]=useState(videos)
     const [selectedVideo, setselectedVideo]=useState(videoDetails[0])
 
+    const selectedVideoHandler=(click)=>{
+      const wantVideo=videoDetails.find((video)=>click=== video.id)
+      setselectedVideo(wantVideo)
+    }
+
     const filteredVideo = videos.filter((video)=> video.id !==selectedVideo.id)
   return (
     <>
@@ -25,7 +30,7 @@ const Main = () => {
         <VideoPlaying videoDetails={selectedVideo}/>
         <Comment/>
         <CommentInfo videoDetails={selectedVideo}/>
-        <NextVideo videos={filteredVideo}/>
+        <NextVideo wantVideo={selectedVideoHandler} videos={filteredVideo}/>
     </>
   )
 }
