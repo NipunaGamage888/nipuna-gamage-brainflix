@@ -6,4 +6,37 @@
 }
 .comment-info__details {
   width: 80%;
+}
+.comment-info__hr {
+  width: 100%;
+}
+.comment-info__comment-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.comment-info__person {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.comment-info__profile-pic {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background-color: black;
+}
+.comment-info__name {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.comment-info__date {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.comment-info__comment {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: justify;
 }/*# sourceMappingURL=commentInfo.css.map */
