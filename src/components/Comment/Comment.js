@@ -1,20 +1,25 @@
 import React from 'react'
+import Button from '../Button/Button'
+import buttonImage from '../../assets/icons/add_comment.svg'
+import mainImage from '../../assets/images/Mohan-muruge.jpg'
+import './comments.css'
 
-function comment() {
+function Comment() {
   return (
-    <section>
-        <h2>3 Comments</h2>
-        <div>
-            <img/>
-            <div>
-                <label>
-                    Join The COnversation
+    <section className='comment'>
+        <h2 className='comment__title'>3 Comments</h2>
+        <div className='comment__form-sec'>
+            <img className='comment__profile-image' alt='blahhh' src={mainImage}/>
+            <form className='comment__form'>
+                <label className='comment__label'>
+                   Join The Conversation
                 </label>
-                <input type='tex'/>
-            </div>
+                <textarea rows="5" columns="15" className='comment__textarea' name='comment' placeholder='Add a New Comment'/>
+                <Button image={buttonImage} buttonName='comment'/>
+            </form>
         </div>
     </section>
   )
 }
 
-export default comment
+export default Comment

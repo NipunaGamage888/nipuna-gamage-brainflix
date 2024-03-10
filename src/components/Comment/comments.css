@@ -1,1 +1,28 @@
-/*# sourceMappingURL=comments.css.map */
+.comment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comment__title {
+  font-size: 2rem;
+}
+.comment__form-sec {
+  display: flex;
+}
+.comment__profile-image {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+.comment__form {
+  display: flex;
+  flex-direction: column;
+}
+.comment__textarea {
+  width: 20rem;
+  height: 8rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=comments.css.map */
