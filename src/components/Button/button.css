@@ -1,9 +1,14 @@
+@font-face {
+  font-family: "BANDSITE";
+  src: url(../../assets//font/AvenirNextLTPro-Regular.otf);
+  src: url(../../assets/font/alternativefiles/AvenirNextLTPro.ttf);
+}
 .button {
   display: flex;
   color: #FFFFFF;
   background-color: #0095FF;
   width: 100%;
-  height: 6vh;
+  height: 4rem;
   border-radius: 5px;
   align-items: center;
   border: none;

@@ -14,7 +14,7 @@ function Comment() {
                 <label className='comment__label'>
                    Join The Conversation
                 </label>
-                <textarea rows="5" columns="15" className='comment__textarea' name='comment' placeholder='Add a New Comment'/>
+                <textarea className='comment__textarea' name='comment' placeholder='Add a New Comment'/>
                 <Button image={buttonImage} buttonName='comment'/>
             </form>
         </div>

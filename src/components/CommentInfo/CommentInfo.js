@@ -4,7 +4,7 @@ function CommentInfo(props) {
 
   return (
     <section className="comment-info">
-      {props.videoDetails.comments.map((videoDetail, index) => {
+      {props.videoDetails.comments.map((videoDetail) => {
         return (
     
             <section className="comment-info__details" key={videoDetail.id}>

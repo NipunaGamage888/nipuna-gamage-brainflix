@@ -5,4 +5,18 @@ $white:#FFFFFF;
 $brainflix-dark-black:#000000;
 $brainflix-dark-blue:#0065AD;
 $alabaster:#FAFAFA;
-$mercury:#E1E1E1
+$mercury:#E1E1E1;
+
+@font-face {
+    font-family: "BANDSITE";
+    src: url(../../assets//font/AvenirNextLTPro-Regular.otf);
+    src: url(../../assets/font/alternativefiles/AvenirNextLTPro.ttf);
+  }
+
+$fontss:'BANDSITE';
+
+
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+$mobile-breakpoint: 599px;
+
