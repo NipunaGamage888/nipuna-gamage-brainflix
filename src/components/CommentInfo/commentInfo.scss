@@ -1,0 +1,12 @@
+
+.comment-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__details{
+        width: 80%;
+    }
+
+}
