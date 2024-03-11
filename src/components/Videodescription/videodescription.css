@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "BANDSITE";
+  src: url(../../assets//font/AvenirNextLTPro-Regular.otf);
+  src: url(../../assets/font/alternativefiles/AvenirNextLTPro.ttf);
+}
+.now-playing {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.now-playing__heading {
+  width: 80%;
+  font-size: 2.2rem;
+}
+.now-playing__line {
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  .now-playing__line {
+    display: none;
+  }
+}
+.now-playing__line-2 {
+  width: 80%;
+}
+.now-playing__info {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.now-playing__creator-details {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .now-playing__creator-details {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 768px) {
+  .now-playing__creator {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-right: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .now-playing__date {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .now-playing__popular {
+    display: flex;
+    align-items: center;
+  }
+}
+.now-playing__likes-sec {
+  display: flex;
+  align-items: baseline;
+}
+@media screen and (min-width: 768px) {
+  .now-playing__likes-sec {
+    padding-left: 2rem;
+  }
+}
+.now-playing__likes {
+  color: #afafaf;
+}
+@media screen and (min-width: 768px) {
+  .now-playing__likes {
+    font-size: 1.2rem;
+  }
+}
+.now-playing__views-sec {
+  display: flex;
+  align-items: baseline;
+}
+.now-playing__views {
+  color: #afafaf;
+}
+@media screen and (min-width: 768px) {
+  .now-playing__views {
+    font-size: 1.2rem;
+  }
+}
+.now-playing__image {
+  color: #afafaf;
+  width: 1rem;
+  height: 1rem;
+  padding-right: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .now-playing__image {
+    padding-right: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+.now-playing__article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.now-playing__desc {
+  width: 80%;
+  text-align: justify;
+}
+@media screen and (min-width: 768px) {
+  .now-playing__desc {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=videodescription.css.map */

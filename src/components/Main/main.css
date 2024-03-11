@@ -1,6 +1,29 @@
+@font-face {
+  font-family: "BANDSITE";
+  src: url(../../assets//font/AvenirNextLTPro-Regular.otf);
+  src: url(../../assets/font/alternativefiles/AvenirNextLTPro.ttf);
+}
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+.main__video {
+  width: 100%;
+}
+@media screen and (min-width: 1280px) {
+  .main__video {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__now-playing {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__next {
+    border-left: 1px solid black;
+  }
 }/*# sourceMappingURL=main.css.map */

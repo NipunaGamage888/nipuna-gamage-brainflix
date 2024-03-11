@@ -1,15 +1,24 @@
+@use '../../styles/partials/mixins.scss' as mixings;
 .comment{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
+    @include mixings.tablet{
+        align-items: center;
+    }
 
     &__title{
-
         font-size: 2rem;
+        
     }
     &__form-sec{
         display: flex;
+        @include mixings.tablet{
+            align-items: center;
+        }
+
     }
     &__profile-image {
         width: 4rem;
@@ -20,12 +29,28 @@
     &__form{
         display: flex;
         flex-direction: column;
+        @include mixings.tablet{
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+    }
+    &__label{
+        display: flex;
+        flex-direction: column;
+
     }
     &__textarea{
         width: 20rem;
-        height: 8rem;
+        height: 5rem;
         border-radius: 5px;
         margin-bottom: 1rem;
+        @include mixings.tablet{
+            margin-bottom: 0;
+            width: 25rem;
+            height: 3.5rem;
+            margin-right: 2rem;
+        }
     }
 
 }

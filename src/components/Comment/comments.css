@@ -1,14 +1,30 @@
+@font-face {
+  font-family: "BANDSITE";
+  src: url(../../assets//font/AvenirNextLTPro-Regular.otf);
+  src: url(../../assets/font/alternativefiles/AvenirNextLTPro.ttf);
+}
 .comment {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .comment {
+    align-items: center;
+  }
 }
 .comment__title {
   font-size: 2rem;
 }
 .comment__form-sec {
   display: flex;
+}
+@media screen and (min-width: 768px) {
+  .comment__form-sec {
+    align-items: center;
+  }
 }
 .comment__profile-image {
   width: 4rem;
@@ -20,9 +36,27 @@
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .comment__form {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+.comment__label {
+  display: flex;
+  flex-direction: column;
+}
 .comment__textarea {
   width: 20rem;
-  height: 8rem;
+  height: 5rem;
   border-radius: 5px;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__textarea {
+    margin-bottom: 0;
+    width: 25rem;
+    height: 3.5rem;
+    margin-right: 2rem;
+  }
 }/*# sourceMappingURL=comments.css.map */
