@@ -15,14 +15,14 @@
   }
   &__line {
     width: 80%;
-    color: colors.$mercury;
+    border: 1px solid colors.$mercury;
     @include mixings.tablet {
       display: none;
     }
   }
   &__line-2 {
     width: 80%;
-    color: colors.$mercury;
+    border: 1px solid colors.$mercury;
   }
   &__info {
     width: 80%;

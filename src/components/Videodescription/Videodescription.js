@@ -1,6 +1,6 @@
 import React from 'react'
-import like from "../../assets/icons/likes.svg";
-import views from "../../assets/icons/views.svg";
+import like from "../../assets/images/icons/likes.svg";
+import views from "../../assets/images/icons/views.svg";
 import './videodescription.css'
 
 function Videodescription(props) {
@@ -17,11 +17,11 @@ function Videodescription(props) {
         </div>
         <div className="now-playing__popular">
           <div className="now-playing__views-sec">
-            <img className="now-playing__image" src={views} />
+            <img alt='icon of views' className="now-playing__image" src={views} />
             <p className="now-playing__views">{props.videoDetails.views}</p>
           </div>
           <div className="now-playing__likes-sec">
-            <img className="now-playing__image" src={like} />
+            <img alt='icon of likes' className="now-playing__image" src={like} />
             <p className="now-playing__likes">{props.videoDetails.likes}</p>
           </div>
         </div>

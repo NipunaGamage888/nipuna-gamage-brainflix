@@ -1,9 +1,9 @@
 import React from "react";
-import logo1 from "../../assets/logo/BrainFlix-logo.svg";
+import logo1 from "../../assets/images/logo/BrainFlix-logo.svg";
 import profile from "../../assets/images/Mohan-muruge.jpg";
 import "./header.css";
 import Button from "../Button/Button.js";
-import buttonImage from "../../assets/icons/upload.svg";
+import buttonImage from "../../assets/images/icons/upload.svg";
 
 const Header = () => {
   return (

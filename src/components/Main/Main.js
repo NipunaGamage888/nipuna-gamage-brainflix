@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Header from "../Header/Header.js";
 import VideoPlaying from "../VideoPlaying/VideoPlaying";
-import videoDetails from "../../assets/data/video-details.json";
-import videos from "../../assets/data/videos.json";
+import videoDetails from "../../data/video-details.json";
+import videos from "../../data/videos.json";
 import Comment from "../Comment/Comment.js";
 import CommentInfo from "../CommentInfo/CommentInfo.js";
 import NextVideo from "../NextVideo/NextVideo.js";

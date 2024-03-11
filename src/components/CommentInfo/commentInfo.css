@@ -3,45 +3,46 @@
   src: url(../../assets//font/AvenirNextLTPro-Regular.otf);
   src: url(../../assets/font/alternativefiles/AvenirNextLTPro.ttf);
 }
-.comment-info {
+.comments-info {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.comment-info__details {
+.comments-info__details {
   width: 80%;
 }
-.comment-info__hr {
+.comments-info__hr {
+  border: 1px solid #E1E1E1;
   width: 100%;
 }
-.comment-info__comment-detail {
+.comments-info__comment-detail {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.comment-info__person {
+.comments-info__person {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.comment-info__profile-pic {
+.comments-info__profile-pic {
   width: 3rem;
   height: 3rem;
   margin-right: 1rem;
   border-radius: 50%;
   background-color: #E1E1E1;
 }
-.comment-info__name {
+.comments-info__name {
   font-size: 1.3rem;
   font-weight: 600;
 }
-.comment-info__date {
+.comments-info__date {
   font-size: 1.3rem;
   color: #afafaf;
   font-weight: 500;
 }
-.comment-info__comment {
+.comments-info__comment {
   font-size: 1.3rem;
   font-weight: 400;
   text-align: justify;

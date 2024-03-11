@@ -18,7 +18,7 @@
 }
 .now-playing__line {
   width: 80%;
-  color: #E1E1E1;
+  border: 1px solid #E1E1E1;
 }
 @media screen and (min-width: 768px) {
   .now-playing__line {
@@ -27,7 +27,7 @@
 }
 .now-playing__line-2 {
   width: 80%;
-  color: #E1E1E1;
+  border: 1px solid #E1E1E1;
 }
 .now-playing__info {
   width: 80%;

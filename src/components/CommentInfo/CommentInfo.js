@@ -3,20 +3,20 @@ function CommentInfo(props) {
   console.log(props.videoDetails);
 
   return (
-    <section className="comment-info">
+    <section className="comments-info">
       {props.videoDetails.comments.map((videoDetail) => {
         return (
     
-            <section className="comment-info__details" key={videoDetail.id}>
+            <section className="comments-info__details" key={videoDetail.id}>
               <hr className='comments-info__hr' />
-              <div className='comment-info__comment-detail'>
-                <div className='comment-info__person'>
-                  <div className='comment-info__profile-pic'></div>
-                  <h3 className='comment-info__name'>{videoDetail.name}</h3>
+              <div className='comments-info__comment-detail'>
+                <div className='comments-info__person'>
+                  <div className='comments-info__profile-pic'></div>
+                  <h3 className='comments-info__name'>{videoDetail.name}</h3>
                 </div>
-                <p className='comment-info__date'>{new Date(videoDetail.timestamp).toLocaleDateString()}</p>
+                <p className='comments-info__date'>{new Date(videoDetail.timestamp).toLocaleDateString()}</p>
               </div>
-              <p className='comment-info__comment'>{videoDetail.comment}</p>
+              <p className='comments-info__comment'>{videoDetail.comment}</p>
               
             </section>
         );

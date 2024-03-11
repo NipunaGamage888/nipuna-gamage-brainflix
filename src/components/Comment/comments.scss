@@ -49,10 +49,13 @@
   }
   &__textarea {
     width: 20rem;
+    padding: 0.8rem;
     height: 5rem;
     border: 1px solid colors.$mercury;
     border-radius: 5px;
     margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: colors.$brainflix-dark-black;
     background-color: colors.$mercury;
     &:focus:placeholder-shown {
       border: 1px solid red;

@@ -15,7 +15,7 @@ function NextVideo({videos, wantVideo}) {
                 return(
                     
                         <button onClick={()=>wantVideo(video.id)} key={video.id} className='videos__button'>
-                        <img className='videos__image' src={video.image}/>
+                        <img className='videos__image'alt='Images of next videos you can watch' src={video.image}/>
                         <div className='videos__info'>
                             <p className='videos__title'>{video.title}</p>
                             <p className='videos__channel'>{video.channel}</p>
