@@ -11,7 +11,7 @@ const Header = () => {
       <img className="header__logo" src={logo1} alt="Logo of the page" />
       <div className="header__input-holder">
         <input className="header__input" type="search" placeholder="Search" />
-        <img alt="blahh" className="header__profile-image" src={profile} />
+        <img alt="profile image" className="header__profile-image" src={profile} />
       </div>
       <div className="header__button-container">
         <Button buttonName="UPLOAD" image={buttonImage} />

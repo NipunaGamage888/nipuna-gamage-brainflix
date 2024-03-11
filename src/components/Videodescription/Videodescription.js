@@ -7,7 +7,7 @@ function Videodescription(props) {
     const date = new Date(props.videoDetails.timestamp).toLocaleDateString();
   return (
     <div className='now-playing'>
-      <h2 className="now-playing__heading">{props.videoDetails.title}</h2>
+      <h1 className="now-playing__heading">{props.videoDetails.title}</h1>
       <hr className="now-playing__line" />
 
       <section className="now-playing__info">
