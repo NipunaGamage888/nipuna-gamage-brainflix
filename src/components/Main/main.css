@@ -3,6 +3,14 @@
   src: url(../../assets//font/AvenirNextLTPro-Regular.otf);
   src: url(../../assets/font/alternativefiles/AvenirNextLTPro.ttf);
 }
+body {
+  font-family: "BANDSITE";
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  overflow-x: hidden;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -24,6 +32,6 @@
 }
 @media screen and (min-width: 1280px) {
   .main__next {
-    border-left: 1px solid black;
+    border-left: 1px solid #E1E1E1;
   }
 }/*# sourceMappingURL=main.css.map */

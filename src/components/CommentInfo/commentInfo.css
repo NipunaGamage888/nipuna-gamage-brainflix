@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "BANDSITE";
+  src: url(../../assets//font/AvenirNextLTPro-Regular.otf);
+  src: url(../../assets/font/alternativefiles/AvenirNextLTPro.ttf);
+}
 .comment-info {
   width: 100%;
   display: flex;
@@ -25,7 +30,7 @@
   height: 3rem;
   margin-right: 1rem;
   border-radius: 50%;
-  background-color: black;
+  background-color: #E1E1E1;
 }
 .comment-info__name {
   font-size: 1.3rem;
@@ -33,6 +38,7 @@
 }
 .comment-info__date {
   font-size: 1.3rem;
+  color: #afafaf;
   font-weight: 500;
 }
 .comment-info__comment {

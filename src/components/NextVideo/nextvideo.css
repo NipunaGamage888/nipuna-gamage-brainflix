@@ -30,8 +30,11 @@
 }
 .videos__image {
   width: 12rem;
-  border-radius: 6px;
+  border-radius: 4px;
   padding-right: 2rem;
+}
+.videos__image.error {
+  background-color: #E1E1E1;
 }
 .videos__info {
   display: flex;

@@ -1,9 +1,11 @@
 @use "../../styles/partials/mixins.scss" as mixings;
+@use "../../styles/partials/variables.scss" as colors;
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  background-color: colors.$white;
 
   @include mixings.tablet{
     flex-direction: row;
@@ -35,6 +37,15 @@
     padding: 1rem;
     width: 100%;
     border-radius: 5px;
+    border: 1px solid colors.$mercury;
+    background-color: colors.$mercury;
+    &:focus:placeholder-shown {
+      border: 1px solid red;
+    }
+
+    &:focus:not(:placeholder-shown) {
+      border: 1px solid colors.$brainflix-blue;
+    }
 
     @include mixings.tablet{
       width: 100%;

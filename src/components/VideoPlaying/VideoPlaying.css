@@ -28,6 +28,7 @@
   height: 35vh;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 4px;
 }
 @media screen and (min-width: 768px) {
   .now-playing__main-image {
@@ -39,4 +40,7 @@
   .now-playing__main-image {
     height: 65vh;
   }
+}
+.now-playing__main-image::-webkit-media-controls-panel {
+  background-color: #323232;
 }/*# sourceMappingURL=VideoPlaying.css.map */

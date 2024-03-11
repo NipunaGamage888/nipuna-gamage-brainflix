@@ -1,4 +1,13 @@
 @use '../../styles/partials/mixins.scss' as mixings;
+@use "../../styles/partials/variables.scss" as colors;
+body {
+    font-family: colors.$fontss;
+    margin: 0;
+    padding: 0;
+    color: colors.$brainflix-dark-black;
+    overflow-x: hidden;
+
+}
 .main{
     display: flex;
     flex-direction: column;
@@ -19,7 +28,7 @@
 
     &__next{
         @include mixings.desktop{
-            border-left: 1px solid black;
+            border-left: 1px solid colors.$mercury;;
         }
     }
 }

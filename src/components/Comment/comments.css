@@ -16,6 +16,7 @@
   }
 }
 .comment__title {
+  color: #323232;
   font-size: 2rem;
 }
 .comment__form-sec {
@@ -43,14 +44,35 @@
   }
 }
 .comment__label {
+  color: #afafaf;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .comment__label {
+    font-size: 2rem;
+    font-weight: 600;
+  }
 }
 .comment__textarea {
   width: 20rem;
   height: 5rem;
+  border: 1px solid #E1E1E1;
   border-radius: 5px;
   margin-bottom: 1rem;
+  background-color: #E1E1E1;
+}
+.comment__textarea:focus:-moz-placeholder-shown {
+  border: 1px solid red;
+}
+.comment__textarea:focus:placeholder-shown {
+  border: 1px solid red;
+}
+.comment__textarea:focus:not(:-moz-placeholder-shown) {
+  border: 1px solid #0095FF;
+}
+.comment__textarea:focus:not(:placeholder-shown) {
+  border: 1px solid #0095FF;
 }
 @media screen and (min-width: 768px) {
   .comment__textarea {

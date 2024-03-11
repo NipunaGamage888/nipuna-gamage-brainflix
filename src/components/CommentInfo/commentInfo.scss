@@ -1,3 +1,4 @@
+@use "../../styles/partials/variables.scss" as colors;
 .comment-info {
   width: 100%;
   display: flex;
@@ -25,7 +26,7 @@
     height: 3rem;
     margin-right: 1rem;
     border-radius: 50%;
-    background-color: black;
+    background-color: colors.$mercury;
   }
   &__name{
     font-size: 1.3rem;
@@ -33,6 +34,7 @@
   }
   &__date{
     font-size: 1.3rem;
+    color: colors.$sliver;
    font-weight: 500; 
   }
   &__comment{

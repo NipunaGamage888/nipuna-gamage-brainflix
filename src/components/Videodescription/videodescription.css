@@ -12,11 +12,13 @@
   justify-content: center;
 }
 .now-playing__heading {
+  color: #000000;
   width: 80%;
   font-size: 2.2rem;
 }
 .now-playing__line {
   width: 80%;
+  color: #E1E1E1;
 }
 @media screen and (min-width: 768px) {
   .now-playing__line {
@@ -25,6 +27,7 @@
 }
 .now-playing__line-2 {
   width: 80%;
+  color: #E1E1E1;
 }
 .now-playing__info {
   width: 80%;
@@ -49,6 +52,9 @@
     font-weight: 700;
     padding-right: 2rem;
   }
+}
+.now-playing__date {
+  color: #afafaf;
 }
 @media screen and (min-width: 768px) {
   .now-playing__date {

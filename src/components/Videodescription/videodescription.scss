@@ -9,17 +9,20 @@
   justify-content: center;
 
   &__heading {
+    color: colors.$brainflix-dark-black;
     width: 80%;
     font-size: 2.2rem;
   }
   &__line {
     width: 80%;
+    color: colors.$mercury;
     @include mixings.tablet {
       display: none;
     }
   }
   &__line-2 {
     width: 80%;
+    color: colors.$mercury;
   }
   &__info {
     width: 80%;
@@ -44,6 +47,7 @@
     }
   }
   &__date {
+    color: colors.$sliver;
     @include mixings.tablet {
       font-size: 1.2rem;
     }

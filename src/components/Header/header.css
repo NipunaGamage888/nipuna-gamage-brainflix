@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  background-color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -44,6 +45,20 @@
   padding: 1rem;
   width: 100%;
   border-radius: 5px;
+  border: 1px solid #E1E1E1;
+  background-color: #E1E1E1;
+}
+.header__input:focus:-moz-placeholder-shown {
+  border: 1px solid red;
+}
+.header__input:focus:placeholder-shown {
+  border: 1px solid red;
+}
+.header__input:focus:not(:-moz-placeholder-shown) {
+  border: 1px solid #0095FF;
+}
+.header__input:focus:not(:placeholder-shown) {
+  border: 1px solid #0095FF;
 }
 @media screen and (min-width: 768px) {
   .header__input {
