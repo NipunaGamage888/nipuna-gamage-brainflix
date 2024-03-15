@@ -1,12 +1,20 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Main from './components/Main/Main.js';
+import Mainpage from './pages/Mainpage';
+import Videouploadpage from './pages/Videouploadpage';
 
 function App() {
   return (
-    <div>
-      <Main/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Mainpage/>}/>
+        <Route path='/videoUpload' element={<Videouploadpage/>}/>
+        <Route path='/home/:homeId' element={<Mainpage/>}/>
+      </Routes>
+    </BrowserRouter>
+      
+
   );
 }
 

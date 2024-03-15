@@ -1,29 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Header/Header.js";
 import VideoPlaying from "../VideoPlaying/VideoPlaying";
-import videoDetails from "../../data/video-details.json";
-import videos from "../../data/videos.json";
+import videoDetails from '../../data/video-details.json'
 import Comment from "../Comment/Comment.js";
 import CommentInfo from "../CommentInfo/CommentInfo.js";
 import NextVideo from "../NextVideo/NextVideo.js";
 import "./main.css";
 import Videodescription from "../Videodescription/Videodescription.js";
-// {
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
-//   "id": "84e96018-4022-434e-80bf-000ce4cd12b8",
-//   "title": "The Future of Artificial Intelligence",
-//   "channel": "Aiden Thompson",
-//   "image": "https://unit-3-project-api-0a5620414506.herokuapp.com/images/image0.jpg"
-// },
+const api_key="?api_key=777219bc-bf2e-4b39-9a97-8cefeb6d3047"
+
 
 const Main = () => {
-  const [video, setVideos] = useState(videos);
-  const [selectedVideo, setselectedVideo] = useState(videoDetails[0]);
+  const [videos, setVideos] = useState([]);
+  
 
-  const selectedVideoHandler = (click) => {
-    const wantVideo = videoDetails.find((video) => click === video.id);
-    setselectedVideo(wantVideo);
-  };
+  const {homeId}=useParams({})
+  let defaultVideo =null
+
+  if(videos.length > 0){
+    
+  }
+
+  useEffect(()=>{
+    const getVideos=async()=>{
+      try{
+        const result= await axios.get(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos${api_key}`)
+        setVideos(result.data)
+
+
+      }catch(error){
+        console.error(error)
+    }
+    }
+    getVideos()
+  },[])
+  
+  // const selectedVideoHandler = (click) => {
+  //   const wantVideo = videos.find((video) => click === wantedVideoID);
+  //   setselectedVideo(wantVideo);
+  // };
 
   const filteredVideo = videos.filter((video) => video.id !== selectedVideo.id);
   return (
@@ -32,12 +50,12 @@ const Main = () => {
       <VideoPlaying videoDetails={selectedVideo} />
       <div className="main__video">
         <div className="main__now-playing">
-          <Videodescription videoDetails={selectedVideo} />
+          <Videodescription videoDetailsID={selectedVideo} />
           <Comment />
-          <CommentInfo videoDetails={selectedVideo} />
+          <CommentInfo videoDetailsID={selectedVideo} />
         </div>
         <div className="main__next">
-          <NextVideo wantVideo={selectedVideoHandler} videos={filteredVideo} />
+          <NextVideo videos={filteredVideo} />
         </div>
       </div>
     </div>

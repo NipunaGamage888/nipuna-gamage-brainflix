@@ -1,10 +1,9 @@
 import './commentInfo.css'
-function CommentInfo(props) {
-  console.log(props.videoDetails);
+function CommentInfo({videoDetails}) {
 
   return (
     <section className="comments-info">
-      {props.videoDetails.comments.map((videoDetail) => {
+      {videoDetails.comments.map((videoDetail) => {
         return (
     
             <section className="comments-info__details" key={videoDetail.id}>

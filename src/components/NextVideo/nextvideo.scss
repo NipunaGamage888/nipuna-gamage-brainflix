@@ -24,6 +24,7 @@
     border: none;
     background-color: colors.$white;
     margin-bottom: 1rem;
+    
   }
   &__image {
     width: 12rem;
@@ -38,12 +39,14 @@
     flex-direction: column;
     flex-wrap: wrap;
     text-align: left;
+    text-decoration: none;
     
   }
   &__title {
     flex-wrap: wrap;
     font-size: 1rem;
     font-weight: 600;
+    text-decoration: none;
   }
   &__channel{
     font-size: 1rem;
