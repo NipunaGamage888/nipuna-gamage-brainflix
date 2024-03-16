@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Header/Header.js";
 import VideoPlaying from "../VideoPlaying/VideoPlaying";
-import videoDetails from '../../data/video-details.json'
 import Comment from "../Comment/Comment.js";
 import CommentInfo from "../CommentInfo/CommentInfo.js";
 import NextVideo from "../NextVideo/NextVideo.js";
@@ -14,15 +13,17 @@ const api_key="?api_key=777219bc-bf2e-4b39-9a97-8cefeb6d3047"
 
 
 const Main = () => {
+
+  const {homeId}=useParams({})
   const [videos, setVideos] = useState([]);
   
 
-  const {homeId}=useParams({})
-  let defaultVideo =null
+ 
+  let defaultVideoId =videos.length>0 ? videos[0].id :null
 
-  if(videos.length > 0){
-    
-  }
+
+  let selectedVideoId= homeId ?? defaultVideoId;
+  const filteredVideo = videos.filter((video) => video.id !== selectedVideoId);
 
   useEffect(()=>{
     const getVideos=async()=>{
@@ -37,22 +38,18 @@ const Main = () => {
     }
     getVideos()
   },[])
-  
-  // const selectedVideoHandler = (click) => {
-  //   const wantVideo = videos.find((video) => click === wantedVideoID);
-  //   setselectedVideo(wantVideo);
-  // };
 
-  const filteredVideo = videos.filter((video) => video.id !== selectedVideo.id);
+
+  
   return (
     <div className="main">
       <Header />
-      <VideoPlaying videoDetails={selectedVideo} />
+      <VideoPlaying videoDetailsID={selectedVideoId} />
       <div className="main__video">
         <div className="main__now-playing">
-          <Videodescription videoDetailsID={selectedVideo} />
+          <Videodescription videoDetailsID={selectedVideoId} />
           <Comment />
-          <CommentInfo videoDetailsID={selectedVideo} />
+          <CommentInfo videoDetailsID={selectedVideoId} />
         </div>
         <div className="main__next">
           <NextVideo videos={filteredVideo} />
