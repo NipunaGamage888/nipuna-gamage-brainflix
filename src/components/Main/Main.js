@@ -4,7 +4,7 @@ import VideoPlaying from "../VideoPlaying/VideoPlaying";
 import Comment from "../Comment/Comment.js";
 import CommentInfo from "../CommentInfo/CommentInfo.js";
 import NextVideo from "../NextVideo/NextVideo.js";
-import "./main.css";
+import "./main.scss";
 import Videodescription from "../Videodescription/Videodescription.js";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -22,7 +22,13 @@ const Main = () => {
   let defaultVideoId =videos.length>0 ? videos[0].id :null
 
 
-  let selectedVideoId= homeId ?? defaultVideoId;
+  const selectedVideoIdfunc=()=>{if(homeId=== null){
+    return defaultVideoId
+  }else{
+    return homeId
+  }}
+
+  let selectedVideoId=selectedVideoIdfunc()
   const filteredVideo = videos.filter((video) => video.id !== selectedVideoId);
 
   useEffect(()=>{

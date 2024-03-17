@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import like from "../../assets/images/icons/likes.svg";
 import views from "../../assets/images/icons/views.svg";
-import "./videodescription.css";
+import "./videodescription.scss";
 
 const api_key = "?api_key=777219bc-bf2e-4b39-9a97-8cefeb6d3047";
 function Videodescription({ videoDetailsID }) {

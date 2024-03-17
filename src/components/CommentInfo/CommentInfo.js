@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import './commentInfo.css'
+import './commentInfo.scss'
 const api_key = "?api_key=777219bc-bf2e-4b39-9a97-8cefeb6d3047";
 
 function CommentInfo({videoDetailsID}) {

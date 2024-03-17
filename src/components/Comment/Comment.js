@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../Button/Button";
 import buttonImage from "../../assets/images/icons/add_comment.svg";
 import mainImage from "../../assets/images/Mohan-muruge.jpg";
-import "./comments.css";
+import "./comments.scss";
 
 function Comment() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import logo1 from "../../assets/images/logo/BrainFlix-logo.svg";
 import profile from "../../assets/images/Mohan-muruge.jpg";
-import "./header.css";
+import "./header.scss";
 import Button from "../Button/Button.js";
 import buttonImage from "../../assets/images/icons/upload.svg";
 import { Link } from "react-router-dom";
