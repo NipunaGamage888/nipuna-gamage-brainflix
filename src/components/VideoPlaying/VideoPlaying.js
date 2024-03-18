@@ -25,7 +25,7 @@ const VideoPlaying = ({ videoDetailsID }) => {
   if (!selectedVideo) {
     return <p>Loading</p>;
   }
-
+  console.log(selectedVideo)
   return (
     <main className="now-playing">
       <div className="now-playing__video-holder">

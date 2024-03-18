@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="header">
-      <Link to={'/'}>
+      <Link to={"/"}>
         <img className="header__logo" src={logo1} alt="Logo of the page" />
       </Link>
 
@@ -22,7 +22,9 @@ const Header = () => {
         />
       </div>
       <div className="header__button-container">
-        <Button buttonName="UPLOAD" image={buttonImage} />
+        <Link to={'/videoUpload'}>
+          <Button buttonName="UPLOAD" image={buttonImage} />
+        </Link>
       </div>
     </header>
   );
