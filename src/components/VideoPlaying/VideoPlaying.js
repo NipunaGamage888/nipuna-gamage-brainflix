@@ -30,7 +30,7 @@ const VideoPlaying = ({ videoDetailsID }) => {
     <main className="now-playing">
       <div className="now-playing__video-holder">
         <video
-          className="now-playing__main-image"
+         className="now-playing__main-image"
           poster={selectedVideo.image}
           controls
         />

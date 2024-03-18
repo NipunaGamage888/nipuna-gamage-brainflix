@@ -1,7 +1,8 @@
 @use '../../styles/partials/mixins.scss' as mixings;
 @use "../../styles/partials/variables.scss" as colors;
+@use "../../styles/partials/typography.scss" as typo;
 body {
-    font-family: colors.$fontss;
+    font-family: typo.$fontss ;
     margin: 0;
     padding: 0;
     color: colors.$brainflix-dark-black;

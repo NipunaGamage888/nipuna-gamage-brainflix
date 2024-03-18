@@ -32,9 +32,6 @@
     @include mixings.desktop{
         height: 65vh;
     }
-    &::-webkit-media-controls-panel{
-        background-color: colors.$brainflix-black;
-    }
   }
   
 

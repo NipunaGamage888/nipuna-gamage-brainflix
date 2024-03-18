@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import Mainpage from './pages/Mainpage.js'
 import Videouploadpage from './pages/Videouploadpage';
 
