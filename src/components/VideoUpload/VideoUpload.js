@@ -4,11 +4,14 @@ import uploader from "../../assets/images/Upload-video-preview.jpg";
 import Button from "../Button/Button";
 import buttonImage from "../../assets/images/icons/upload.svg";
 import { Link, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './Videoupload.scss'
 
 function VideoUpload() {
+    const navigate =useNavigate()
   const uploadAlert = () => {
     alert("Your Video Uploaded");
+    navigate("/")
   };
 
   return (
@@ -27,7 +30,7 @@ function VideoUpload() {
             <label className="video-upload__label">TITLE YOUR VIDEO</label>
             <input className="video-upload__input" placeholder="Add a Title to your Video" />
             <label className="video-upload__label">ADD A DESCRIPTION</label>
-            <textarea className="video-upload__input" placeholder="ADD A DESCRIPTION TO YOUR VIDEO" />
+            <textarea className="video-upload__input-text" placeholder="ADD A DESCRIPTION TO YOUR VIDEO" />
             <div className="video-upload__button-sec">
               <div className="video-upload__button" onClick={uploadAlert}>
                 <Button buttonName="PUBLISH" image={buttonImage} />

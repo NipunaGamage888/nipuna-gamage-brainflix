@@ -26,6 +26,10 @@ body {
   }
   &__section {
     width: 90%;
+    @include mixings.desktop{
+        display: flex;
+        align-items: first baseline;
+    }
   }
   &__image-sec {
     width: 100%;
@@ -39,8 +43,13 @@ body {
     }
   }
   &__img-heading {
+    color: colors.$sliver;
+      font-weight: 400;
     @include mixings.tablet {
       align-self: self-start;
+      font-size:2rem ;
+      color: colors.$sliver;
+      font-weight: 400;
     }
   }
   &__image {
@@ -56,7 +65,8 @@ body {
       align-self: self-start;
     }
     @include mixings.desktop {
-      height: 65vh;
+      height: 20vh;
+      width: 30rem;
     }
   }
   &__form {
@@ -67,17 +77,45 @@ body {
     align-items: center;
   }
   &__label {
+    color: colors.$sliver;
+      font-weight: 400;
     font-weight: 600;
     font-size: 1rem;
     align-self: self-start;
     margin-top: 2rem;
+    @include mixings.desktop{
+        font-size:1.5rem ;
+    }
   }
   &__input {
+    border: 1px solid colors.$mercury; ;
+    color: colors.$brainflix-black;
+    background-color: colors.$mercury;
+      font-weight: 400;
     width: 90%;
     padding: 1rem;
 
     @include mixings.tablet {
       width: 95%;
+    }
+    @include mixings.desktop{
+        font-size: 1rem;
+    }
+  }
+  &__input-text {
+    border: 1px solid colors.$mercury; ;
+    color: colors.$brainflix-black;
+    background-color: colors.$mercury;;
+      font-weight: 400;
+    width: 90%;
+    padding: 1rem;
+
+    @include mixings.tablet {
+      width: 95%;
+    }
+    @include mixings.desktop{
+        height: 5rem;
+        font-size: 1rem;
     }
   }
   &__button-sec{
