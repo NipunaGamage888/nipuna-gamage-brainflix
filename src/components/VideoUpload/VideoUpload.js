@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import buttonImage from "../../assets/images/icons/upload.svg";
 import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import './Videoupload.scss'
+import './VideoUpload.scss'
 
 function VideoUpload() {
     const navigate =useNavigate()
