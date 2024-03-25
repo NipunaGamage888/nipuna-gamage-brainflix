@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button/Button";
 import buttonImage from "../../assets/images/icons/add_comment.svg";
 import mainImage from "../../assets/images/Mohan-muruge.jpg";
 import "./comments.scss";
+import axios from "axios";
 
-function Comment() {
+function Comment({ videoDetailsID }) {
+  console.log(videoDetailsID);
+  const [comment, setComment] = useState("");
+  const uploadComment = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post(
+        `http://localhost:8080/api/videos/${videoDetailsID}/comments`,
+        {
+          comment,
+        }
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <section className="comment">
       <h2 className="comment__title">3 Comments</h2>
@@ -15,17 +32,20 @@ function Comment() {
           src={mainImage}
         />
         <form className="comment__form">
-          <label className="comment__label" for="comment">
+          <label className="comment__label" htmlFor="comment">
             Join The Conversation
             <textarea
               id="comment"
               name="comment"
               className="comment__textarea"
               placeholder="Add a New Comment"
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
             />
           </label>
-
-          <Button image={buttonImage} buttonName="comment" />
+          <span onClick={uploadComment}>
+            <Button image={buttonImage} buttonName="comment" />
+          </span>
         </form>
       </div>
     </section>

@@ -9,7 +9,7 @@ import Videodescription from "../Videodescription/Videodescription.js";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-const api_key = "?api_key=777219bc-bf2e-4b39-9a97-8cefeb6d3047";
+
 
 const Main = () => {
   const { homeId } = useParams();
@@ -35,7 +35,7 @@ const Main = () => {
     const getVideos = async () => {
       try {
         const result = await axios.get(
-          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos${api_key}`
+          `http://localhost:8080/api/videos`
         );
         setVideos(result.data);
       } catch (error) {
@@ -45,6 +45,8 @@ const Main = () => {
     getVideos();
   }, []);
 
+  
+
   return (
     <div className="main">
       <Header />
@@ -52,7 +54,7 @@ const Main = () => {
       <div className="main__video">
         <div className="main__now-playing">
           <Videodescription videoDetailsID={selectedVideoId} />
-          <Comment />
+          <Comment videoDetailsID={selectedVideoId} />
           <CommentInfo videoDetailsID={selectedVideoId} />
         </div>
         <div className="main__next">
