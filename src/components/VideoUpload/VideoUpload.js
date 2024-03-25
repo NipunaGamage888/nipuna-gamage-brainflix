@@ -18,7 +18,7 @@ function VideoUpload() {
   const uploadAlert = async (event) => {
     event.preventDefault()
     try {
-      const response = await axios.post(`http://localhost:8080/api/videos`, {
+      await axios.post(`http://localhost:8080/api/videos`, {
         title,
         description,
       });
