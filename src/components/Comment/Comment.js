@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Button from "../Button/Button";
 import buttonImage from "../../assets/images/icons/add_comment.svg";
 import mainImage from "../../assets/images/Mohan-muruge.jpg";
@@ -6,8 +6,9 @@ import "./comments.scss";
 import axios from "axios";
 
 function Comment({ videoDetailsID }) {
-  console.log(videoDetailsID);
+
   const [comment, setComment] = useState("");
+
   const uploadComment = async (event) => {
     event.preventDefault();
     try {
@@ -17,10 +18,10 @@ function Comment({ videoDetailsID }) {
           comment,
         }
       );
-      console.log(response.data);
     } catch (error) {
       console.error(error);
     }
+    setComment('')
   };
   return (
     <section className="comment">

@@ -13,11 +13,11 @@ import { useParams } from "react-router-dom";
 
 const Main = () => {
   const { homeId } = useParams();
-  console.log(homeId)
+
   const [videos, setVideos] = useState([]);
 
   let firstVideo = videos.length > 0 ? videos[0].id : null;
-  console.log(firstVideo)
+
 
 
   const selectedVideoIdfunc = () => {
@@ -30,7 +30,6 @@ const Main = () => {
 
   let selectedVideoId = selectedVideoIdfunc();
   const filteredVideo = videos.filter((video) => video.id !== selectedVideoId);
-  console.log(selectedVideoId);
   useEffect(() => {
     const getVideos = async () => {
       try {

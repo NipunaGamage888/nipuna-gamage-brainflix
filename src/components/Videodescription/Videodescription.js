@@ -1,12 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import like from "../../assets/images/icons/likes.svg";
+import likeimg from "../../assets/images/icons/likes.svg";
 import views from "../../assets/images/icons/views.svg";
 import "./videodescription.scss";
 
 function Videodescription({ videoDetailsID }) {
   const [selectedVideo, setselectedVideos] = useState(null);
+  const [like, setLike] = useState();
+ 
 
   useEffect(()=>{
     const getVideos=async()=>{
@@ -26,6 +28,16 @@ function Videodescription({ videoDetailsID }) {
   if (!selectedVideo) {
     return <p>Loading</p>;
   }
+ 
+
+  const updateLike = async () => {
+      try {
+          const response = await axios.put(`http://localhost:8080/videos/${videoDetailsID}/likes`);
+          setLike(response.data.likes);
+      } catch (error) {
+          console.error("Error liking video:", error);
+      }
+  };
 
   const date = new Date(selectedVideo.timestamp).toLocaleDateString();
   return (
@@ -51,9 +63,9 @@ function Videodescription({ videoDetailsID }) {
             <img
               alt="icon of likes"
               className="now-playing__image"
-              src={like}
+              src={likeimg}
             />
-            <p className="now-playing__likes">{selectedVideo.likes}</p>
+            <p onClick={updateLike} className="now-playing__likes">{selectedVideo.likes}</p>
           </div>
         </div>
       </section>
