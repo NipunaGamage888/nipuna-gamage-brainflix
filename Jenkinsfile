@@ -8,10 +8,10 @@ pipeline{
         sh 'npm install'
       }
     }
-    stage{
+    stage('start app'){
       steps{
         echo 'Starting the app...'
-        sh 'npm start src/index.js'
+        sh 'npm start'
       }
     }
   }
