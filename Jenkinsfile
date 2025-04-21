@@ -11,7 +11,7 @@ pipeline{
     stage('start app'){
       steps{
         echo 'Starting the app...'
-        sh 'npm start'
+        sh 'npm run build'
       }
     }
   }
