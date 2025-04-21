@@ -2,9 +2,16 @@ pipeline{
   agent any
 
   stages{
-    stages('Install Frontend dependencies'){
+    stage('Install Frontend dependencies'){
       steps{
-        
+        echo 'Installing frontend Dependencies...'
+        sh 'npm install'
+      }
+    }
+    stage{
+      steps{
+        echo 'Starting the app...'
+        sh 'npm start src/index.js'
       }
     }
   }
