@@ -16,7 +16,7 @@ const Header = () => {
       <div className="header__input-holder">
         <input className="header__input" type="search" placeholder="Search" />
         <img
-          alt="profile image"
+          alt="profile"
           className="header__profile-image"
           src={profile}
         />
