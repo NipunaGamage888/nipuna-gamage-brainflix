@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Button from "../Button/Button";
 import buttonImage from "../../assets/images/icons/add_comment.svg";
 import mainImage from "../../assets/images/Mohan-muruge.jpg";
