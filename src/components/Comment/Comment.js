@@ -29,7 +29,7 @@ function Comment({ videoDetailsID }) {
       <div className="comment__form-sec">
         <img
           className="comment__profile-image"
-          alt="profile photo imagee"
+          alt="profile photo"
           src={mainImage}
         />
         <form className="comment__form">
