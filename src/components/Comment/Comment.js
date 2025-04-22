@@ -12,7 +12,7 @@ function Comment({ videoDetailsID }) {
   const uploadComment = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(
+      await axios.post(
         `http://localhost:8080/api/videos/${videoDetailsID}/comments`,
         {
           comment,
