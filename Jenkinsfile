@@ -1,22 +1,23 @@
-pipeline{
-  agent any
+pipeline {
+    agent any
 
-  stages{
-    stage('Install Frontend dependencies') {
-    steps {
-       echo 'Installing frontend Dependencies...'
-        sh '''
-            rm -rf node_modules package-lock.json
-            npm cache clean --force
-            npm install
-        '''
+    stages {
+        stage('Install Frontend dependencies') {
+            steps {
+                echo 'Installing frontend Dependencies...'
+                sh '''
+                    rm -rf node_modules package-lock.json
+                    npm cache clean --force
+                    npm install
+                '''
+            }
         }
-    }
-}
-    stage('start app'){
-      steps{
-        echo 'Starting the app...'
-        sh 'npm run build'
-      }
+
+        stage('Build React App') {
+            steps {
+                echo 'Starting the app...'
+                sh 'npm run build'
+            }
+        }
     }
 }
