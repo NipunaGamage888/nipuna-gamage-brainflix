@@ -7,7 +7,6 @@ import "./videodescription.scss";
 
 function Videodescription({ videoDetailsID }) {
   const [selectedVideo, setselectedVideos] = useState(null);
-  const [like, setLike] = useState();
  
 
   useEffect(()=>{
