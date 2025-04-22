@@ -6,7 +6,7 @@ import buttonImage from "../../assets/images/icons/upload.svg";
 import { Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./VideoUpload.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 function VideoUpload() {
@@ -40,7 +40,7 @@ function VideoUpload() {
         <section className="video-upload__section">
           <div className="video-upload__image-sec">
             <h3 className="video-upload__img-heading">Video Thumbnail</h3>
-            <img className="video-upload__image" src={uploader} />
+            <img alt="I don't know what" className="video-upload__image" src={uploader} />
           </div>
           <form className="video-upload__form">
             <label className="video-upload__label">TITLE YOUR VIDEO</label>
