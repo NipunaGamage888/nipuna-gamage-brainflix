@@ -64,7 +64,9 @@ function Videodescription({ videoDetailsID }) {
               className="now-playing__image"
               src={likeimg}
             />
-            <p onClick={updateLike} className="now-playing__likes">{selectedVideo.likes}</p>
+            <p onClick={updateLike} className="now-playing__likes">{selectedVideo.likes}
+                {like !== undefined ? like : selectedVideo.likes}
+                </p>
           </div>
         </div>
       </section>
